@@ -1,0 +1,30 @@
+{
+  "name": "flavioro-dialog-server",
+  "license": "MIT",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.9",
+    "@types/graphql": "^14.5.0",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^14.14.10",
+    "nodemon": "^2.0.6",
+    "ts-node": "9.0.0",
+    "typescript": "4.1.2"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "reflect-metadata": "^0.1.10",
+    "type-graphql": "^1.1.1"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "prestart": "yarn build",
+    "start": "node dist/index.js"
+  }
+}
